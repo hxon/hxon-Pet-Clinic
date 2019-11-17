@@ -41,7 +41,6 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/hxon/hxon-Pet-Clinic.git</developerConnection>
-      <tag>HEAD</tag>
+        <developerConnection>scm:git:git@github.com:hxon/hxon-Pet-Clinic.git</developerConnection>
   </scm>
 </project>
