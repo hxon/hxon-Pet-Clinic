@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>hxon-pet-clinic</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6-SNAPSHOT</version>
     <name>hxon-pet-clinic</name>
     <description>Hxon Pet Clinic</description>
 
@@ -42,6 +42,6 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:hxon/hxon-Pet-Clinic.git</developerConnection>
-    <tag>hxon-pet-clinic-0.0.5</tag>
+    <tag>HEAD</tag>
   </scm>
 </project>
