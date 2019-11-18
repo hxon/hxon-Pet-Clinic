@@ -1,11 +1,13 @@
-package com.example.services.map;
+package com.example.hxonpetclinic.services.map;
 
-import com.example.model.Pet;
-import com.example.services.CrudService;
+import com.example.hxonpetclinic.model.Pet;
+import com.example.hxonpetclinic.services.CrudService;
+import com.example.hxonpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
+
     @Override
     public Pet findById(Long id) {
         return super.findById(id);

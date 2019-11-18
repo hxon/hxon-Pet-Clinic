@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.hxonpetclinic.model;
 
 public class PetType extends BaseEntity {
 

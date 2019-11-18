@@ -1,6 +1,6 @@
-package com.example.services;
+package com.example.hxonpetclinic.services;
 
-import com.example.model.Vet;
+import com.example.hxonpetclinic.model.Vet;
 
 
 public interface VetService extends CrudService<Vet, Long> {

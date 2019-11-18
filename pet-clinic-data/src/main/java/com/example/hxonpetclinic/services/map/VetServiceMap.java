@@ -1,11 +1,12 @@
-package com.example.services.map;
+package com.example.hxonpetclinic.services.map;
 
-import com.example.model.Vet;
-import com.example.services.CrudService;
+import com.example.hxonpetclinic.model.Vet;
+import com.example.hxonpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+
     @Override
     public Vet findById(Long id) {
         return super.findById(id);
@@ -29,5 +30,10 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements Crud
     @Override
     public void delete(Vet object) {
         super.delete(object);
+    }
+
+    @Override
+    public Vet findByLastName(String lastName) {
+        return null;
     }
 }
