@@ -1,4 +1,4 @@
-package com.example.hxonpetclinic.hxonpetclinic;
+package com.example.hxonpetclinic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.example.hxonpetclinic.hxonpetclinic.controllers;
+package com.example.hxonpetclinic.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

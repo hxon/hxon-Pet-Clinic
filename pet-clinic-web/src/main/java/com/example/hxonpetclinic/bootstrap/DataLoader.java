@@ -1,11 +1,9 @@
-package com.example.hxonpetclinic.hxonpetclinic.bootstrap;
+package com.example.hxonpetclinic.bootstrap;
 
 import com.example.hxonpetclinic.model.Owner;
 import com.example.hxonpetclinic.model.Vet;
 import com.example.hxonpetclinic.services.OwnerService;
 import com.example.hxonpetclinic.services.VetService;
-import com.example.hxonpetclinic.services.map.OwnerServiceMap;
-import com.example.hxonpetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

@@ -2,9 +2,11 @@ package com.example.hxonpetclinic.services.map;
 
 import com.example.hxonpetclinic.model.Vet;
 import com.example.hxonpetclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
