@@ -1,10 +1,7 @@
 package com.example.hxonpetclinic.bootstrap;
 
 import com.example.hxonpetclinic.model.*;
-import com.example.hxonpetclinic.services.OwnerService;
-import com.example.hxonpetclinic.services.PetTypeService;
-import com.example.hxonpetclinic.services.SpecialityService;
-import com.example.hxonpetclinic.services.VetService;
+import com.example.hxonpetclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +14,14 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -75,8 +74,14 @@ public class DataLoader implements CommandLineRunner {
         fionasCat.setName("Just Cat");
         owner2.getPets().add(fionasCat);
         ownerService.save(owner2);
-
         System.out.println("Loaded Owners......");
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+
+        visitService.save(catVisit);
 
 
         Speciality radiology = new Speciality();
